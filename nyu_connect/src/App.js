@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import Profile from './pages/TeacherProfile';
+import Home from './pages/Home';
 
 function App() {
   return (
