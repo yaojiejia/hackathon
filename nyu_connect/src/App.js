@@ -1,5 +1,8 @@
 import logo from './logo.svg';
+import { Outlet, Link } from "react-router-dom";
 import './App.css';
+import Profile from './pages/Profile';
+import Home from './pages/Home';
 
 function App() {
   return (
@@ -14,7 +17,7 @@ function App() {
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
-        >
+        >3
           Learn React
         </a>
       </header>
