@@ -1,240 +1,289 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Homepage</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+	<title>Homepage</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		body,
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-family: "Raleway", sans-serif
+		}
 
-body, html {
-  height: 100%;
-  line-height: 1.8;
-}
+		body,
+		html {
+			height: 100%;
+			line-height: 1.8;
+		}
 
-/* Full height image header */
-.bgimg-1 {
-  background-position: center;
-  background-size: cover;
-  background-image: url("/w3images/mac.jpg");
-  min-height: 100%;
-}
+		/* Full height image header */
+		.bgimg-1 {
+			background-position: center;
+			background-size: cover;
+			background-image: url("/w3images/mac.jpg");
+			min-height: 100%;
+		}
 
-.w3-bar .w3-button {
-  padding: 16px;
-}
-</style>
+		.w3-bar .w3-button {
+			padding: 16px;
+		}
+	</style>
 </head>
+
 <body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-button w3-wide">HIGHFIVE</a>
-    <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-      <!--<a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>-->
-      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
-      <!--<a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>-->
-      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
-    </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+	<!-- Navbar (sit on top) -->
+	<div class="w3-top">
+		<div class="w3-bar w3-white w3-card" id="myNavbar">
+			<a href="#home" class="w3-bar-item w3-button w3-wide">HIGHFIVE</a>
+			<!-- Right-sided navbar links -->
+			<div class="w3-right w3-hide-small">
+				<div class="search-container">
+					<form action="/action_page.php">
+						<input type="text" placeholder="Search.." name="search">
+						<button type="submit">Submit</button>
+					</form>
+				</div>
+				<a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+				<!--<a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>-->
+				<a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
+				<!--<a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>-->
+				<a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+			</div>
+			<!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-</div>
+			<a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+				onclick="w3_open()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
+	</div>
 
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
-  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
-</nav>
+	<!-- Sidebar on small screens when clicking the menu icon -->
+	<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
+		style="display:none" id="mySidebar">
+		<a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close
+			×</a>
+		<a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+		<a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+		<a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+		<a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
+		<a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+	</nav>
 
-<!-- About Section -->
-<div class="w3-container" style="padding:128px 16px" id="about">
-  <h3 class="w3-center">ABOUT HIGHFIVE</h3>
-  <p class="w3-center w3-large">Key features of our company</p>
-  <div class="w3-row-padding w3-center" style="margin-top:64px">
-    <div class="w3-quarter">
-      <i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
-      <p class="w3-large">Flexible</p>
-      <p>Tutoring timings are flexible. Working hours are flexible. As a student or tutor, you can select and schedule appointments that fit within your personal schedule</p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Passion</p>
-      <p>Our tutors are extremely passionate, motivated, and intelligent students studying at top universities in the United States. We strongly believe that passion is contagious, so if you're their student, they'll make you love the subject too!</p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Quality</p>
-      <p>Our tutors come exclusively from top American universities and have a baseline GPA of 3.5+. Moreover, we have periodic audits of tutors to verify the quality of their teaching.</p>
-    </div>
-    <div class="w3-quarter">
-      <i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
-      <p class="w3-large">Support</p>
-      <p>Support through email, SMS, and WhatsApp is available at all times, and we usually respond within 20-30 min and at max within 12 hours.</p>
-    </div>
-  </div>
-</div>
+	<!-- About Section -->
+	<div class="w3-container" style="padding:128px 16px" id="about">
+		<h3 class="w3-center">ABOUT HIGHFIVE</h3>
+		<p class="w3-center w3-large">Key features of our company</p>
+		<div class="w3-row-padding w3-center" style="margin-top:64px">
+			<div class="w3-quarter">
+				<i class="fa fa-desktop w3-margin-bottom w3-jumbo w3-center"></i>
+				<p class="w3-large">Flexible</p>
+				<p>Tutoring timings are flexible. Working hours are flexible. As a student or tutor, you can select and
+					schedule appointments that fit within your personal schedule</p>
+			</div>
+			<div class="w3-quarter">
+				<i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+				<p class="w3-large">Passion</p>
+				<p>Our tutors are extremely passionate, motivated, and intelligent students studying at top universities
+					in the United States. We strongly believe that passion is contagious, so if you're their student,
+					they'll make you love the subject too!</p>
+			</div>
+			<div class="w3-quarter">
+				<i class="fa fa-diamond w3-margin-bottom w3-jumbo"></i>
+				<p class="w3-large">Quality</p>
+				<p>Our tutors come exclusively from top American universities and have a baseline GPA of 3.5+. Moreover,
+					we have periodic audits of tutors to verify the quality of their teaching.</p>
+			</div>
+			<div class="w3-quarter">
+				<i class="fa fa-cog w3-margin-bottom w3-jumbo"></i>
+				<p class="w3-large">Support</p>
+				<p>Support through email, SMS, and WhatsApp is available at all times, and we usually respond within
+					20-30 min and at max within 12 hours.</p>
+			</div>
+		</div>
+	</div>
 
-<!-- Promo Section "Statistics" -->
-<div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
-  <div class="w3-quarter">
-    <span class="w3-xxlarge">20+</span>
-    <br>Subjects Offered
-  </div>
-  <div class="w3-quarter">
-    <span class="w3-xxlarge">200+</span>
-    <br>Tutors
-  </div>
-  <div class="w3-quarter">
-    <span class="w3-xxlarge">500+</span>
-    <br>Happy Clients
-  </div>
-  <div class="w3-quarter">
-    <span class="w3-xxlarge">10000+</span>
-    <br>Total Teaching Hours
-  </div>
-</div>
+	<!-- Promo Section "Statistics" -->
+	<div class="w3-container w3-row w3-center w3-dark-grey w3-padding-64">
+		<div class="w3-quarter">
+			<span class="w3-xxlarge">20+</span>
+			<br>Subjects Offered
+		</div>
+		<div class="w3-quarter">
+			<span class="w3-xxlarge">200+</span>
+			<br>Tutors
+		</div>
+		<div class="w3-quarter">
+			<span class="w3-xxlarge">500+</span>
+			<br>Happy Clients
+		</div>
+		<div class="w3-quarter">
+			<span class="w3-xxlarge">10000+</span>
+			<br>Total Teaching Hours
+		</div>
+	</div>
 
-<!-- Work Section -->
-<div class="w3-container" style="padding:128px 16px" id="work">
-  <h3 class="w3-center">OUR WORK</h3>
-  <p class="w3-center w3-large">What students and tutors have to say about us</p>
+	<!-- Work Section -->
+	<div class="w3-container" style="padding:128px 16px" id="work">
+		<h3 class="w3-center">OUR WORK</h3>
+		<p class="w3-center w3-large">What students and tutors have to say about us</p>
 
-  <div class="w3-row-padding" style="margin-top:64px">
-    <div class="w3-col l3 m6">
-      <img src="high-shcool-student.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A High School Student">
-      <p>Meet Alissa, a senior at Stuyvesant High School.</p>
-      <p>"I loved working with a tutor on Highfive. I was anxious at first, but within a couple of classes, my tutor and I developed a rapport and things went super smoothly from there. Through her energy, thoughtfulness and creativity, my tutor was able to get me interested in math, which I dreaded in school. I finally began finding the problem sets assigned to me at school interesting and started too see what math was really about! I went from a B/C student to a straight A student! Couldn't recommend this platform more!!"</p>
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="college-student-woman.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A Tutor">
-      <p>Meet Emily, a junior honors math major at NYU.</p>
-      <p>"I loved being a tutor! Not only did it give me a side income, but it also allowed me to build my interpersonal skills and help anxious high schoolers and college freshmen with their coursework. I like that I feel like I am making a difference in someone's life. Highfive made it extremely straightforward to connect with students searching for a tutor and I recommend it 100%"</p>
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="college-student.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A Tutor">
-      <p>Meet Fernando, a sophomore at Columbia studying Economics and Computer Science.</p>
-      <p>"Highfive is THE best site for matching with students (and tutors)! The site was easy to use, and the students I taught and came across were always respectful and courteous. Being a tutor on highfive enabled me to revisit what I'd learned earlier (and served as an important review) and helped me earn enough to take care of my living expenses in college!"</p>
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="High-School-Student-2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Soundbox">
-      <p>Meet Brian, a freshman at the Bronx High School of Science.</p>
-      <p>"Highfive was a Godsend! It facilitated the the pairing of me and my tutor, who took me from the middle of my class of 100 to the top 5!. He made chemistry and biology so simple and elegant that I went from hating Bio & Chem to now wanting to major in biochem at college! Thanks a ton Highfive, I cannot be more grateful!"</p>
-    </div>
-  </div>
+		<div class="w3-row-padding" style="margin-top:64px">
+			<div class="w3-col l3 m6">
+				<img src="high-shcool-student.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+					alt="A High School Student">
+				<p>Meet Alissa, a senior at Stuyvesant High School.</p>
+				<p>"I loved working with a tutor on Highfive. I was anxious at first, but within a couple of classes, my
+					tutor and I developed a rapport and things went super smoothly from there. Through her energy,
+					thoughtfulness and creativity, my tutor was able to get me interested in math, which I dreaded in
+					school. I finally began finding the problem sets assigned to me at school interesting and started
+					too see what math was really about! I went from a B/C student to a straight A student! Couldn't
+					recommend this platform more!!"</p>
+			</div>
+			<div class="w3-col l3 m6">
+				<img src="college-student-woman.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+					alt="A Tutor">
+				<p>Meet Emily, a junior honors math major at NYU.</p>
+				<p>"I loved being a tutor! Not only did it give me a side income, but it also allowed me to build my
+					interpersonal skills and help anxious high schoolers and college freshmen with their coursework. I
+					like that I feel like I am making a difference in someone's life. Highfive made it extremely
+					straightforward to connect with students searching for a tutor and I recommend it 100%"</p>
+			</div>
+			<div class="w3-col l3 m6">
+				<img src="college-student.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+					alt="A Tutor">
+				<p>Meet Fernando, a sophomore at Columbia studying Economics and Computer Science.</p>
+				<p>"Highfive is THE best site for matching with students (and tutors)! The site was easy to use, and the
+					students I taught and came across were always respectful and courteous. Being a tutor on highfive
+					enabled me to revisit what I'd learned earlier (and served as an important review) and helped me
+					earn enough to take care of my living expenses in college!"</p>
+			</div>
+			<div class="w3-col l3 m6">
+				<img src="High-School-Student-2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity"
+					alt="Soundbox">
+				<p>Meet Brian, a freshman at the Bronx High School of Science.</p>
+				<p>"Highfive was a Godsend! It facilitated the the pairing of me and my tutor, who took me from the
+					middle of my class of 100 to the top 5!. He made chemistry and biology so simple and elegant that I
+					went from hating Bio & Chem to now wanting to major in biochem at college! Thanks a ton Highfive, I
+					cannot be more grateful!"</p>
+			</div>
+		</div>
 
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
-</div>
+		<!-- Modal for full size images on click-->
+		<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+			<span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright"
+				title="Close Modal Image">×</span>
+			<div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+				<img id="img01" class="w3-image">
+				<p id="caption" class="w3-opacity w3-large"></p>
+			</div>
+		</div>
 
-<!-- Skills Section -->
-<div class="w3-container w3-light-grey w3-padding-64">
-  <div class="w3-row-padding">
-    <div class="w3-col m6">
-      <h3>Our Skills.</h3>
-      <p>Our tutors have multiple skillsets and are proficient in a variety of disciplines.</p>
-    </div>
-    <div class="w3-col m6">
-      <p class="w3-wide"><i class="fa fa-camera w3-margin-right"></i>Fraction of Tutors teaching one or more of Math, Computer Science, Engineering, and Physics</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:45%">45%</div>
-      </div>
-      <p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>Fraction of Tutors teaching one or more of Economics, Philosophy, History, and Political Science</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:35%">25%</div>
-      </div>
-      <p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>Fraction of Tutors teaching one or more of Biology and Chemistry</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:10%">10%</div>
-      </div>
-      <p class="w3-wide"><i class="fa fa-photo w3-margin-right"></i>Fraction of Tutors teaching one or more of Sociology, Anthropology, Archeology, Art History</p>
-      <div class="w3-grey">
-        <div class="w3-container w3-dark-grey w3-center" style="width:15%">15%</div>
-      </div>
-    </div>
-  </div>
-</div>
+		<!-- Skills Section -->
+		<div class="w3-container w3-light-grey w3-padding-64">
+			<div class="w3-row-padding">
+				<div class="w3-col m6">
+					<h3>Our Skills.</h3>
+					<p>Our tutors have multiple skillsets and are proficient in a variety of disciplines.</p>
+				</div>
+				<div class="w3-col m6">
+					<p class="w3-wide"><i class="fa fa-camera w3-margin-right"></i>Fraction of Tutors teaching one or
+						more of Math, Computer Science, Engineering, and Physics</p>
+					<div class="w3-grey">
+						<div class="w3-container w3-dark-grey w3-center" style="width:45%">45%</div>
+					</div>
+					<p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>Fraction of Tutors teaching one or
+						more of Economics, Philosophy, History, and Political Science</p>
+					<div class="w3-grey">
+						<div class="w3-container w3-dark-grey w3-center" style="width:35%">25%</div>
+					</div>
+					<p class="w3-wide"><i class="fa fa-desktop w3-margin-right"></i>Fraction of Tutors teaching one or
+						more of Biology and Chemistry</p>
+					<div class="w3-grey">
+						<div class="w3-container w3-dark-grey w3-center" style="width:10%">10%</div>
+					</div>
+					<p class="w3-wide"><i class="fa fa-photo w3-margin-right"></i>Fraction of Tutors teaching one or
+						more of Sociology, Anthropology, Archeology, Art History</p>
+					<div class="w3-grey">
+						<div class="w3-container w3-dark-grey w3-center" style="width:15%">15%</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-<!-- Contact Section -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
-  <h3 class="w3-center">CONTACT</h3>
-  <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
-  <div style="margin-top:48px">
-    <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> New York, US</p>
-    <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +1 (646) 309-1715</p>
-    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: aib6932@nyu.edu</p>
-    <br>
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
-      <p>
-        <button class="w3-button w3-black" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </p>
-    </form>
-  </div>
-</div>
+		<!-- Contact Section -->
+		<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+			<h3 class="w3-center">CONTACT</h3>
+			<p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+			<div style="margin-top:48px">
+				<p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> New York, US</p>
+				<p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +1 (646) 309-1715</p>
+				<p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: aib6932@nyu.edu</p>
+				<br>
+				<form action="/action_page.php" target="_blank">
+					<p><input class="w3-input w3-border" type="text" placeholder="Name" required name="Name"></p>
+					<p><input class="w3-input w3-border" type="text" placeholder="Email" required name="Email"></p>
+					<p><input class="w3-input w3-border" type="text" placeholder="Subject" required name="Subject"></p>
+					<p><input class="w3-input w3-border" type="text" placeholder="Message" required name="Message"></p>
+					<p>
+						<button class="w3-button w3-black" type="submit">
+							<i class="fa fa-paper-plane"></i> SEND MESSAGE
+						</button>
+					</p>
+				</form>
+			</div>
+		</div>
 
-<!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64">
-  <!--<a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>-->
-  <div class="w3-xlarge w3-section">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-  </div>
-</footer>
- 
-<script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
+		<!-- Footer -->
+		<footer class="w3-center w3-black w3-padding-64">
+			<!--<a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>-->
+			<div class="w3-xlarge w3-section">
+				<i class="fa fa-facebook-official w3-hover-opacity"></i>
+				<i class="fa fa-instagram w3-hover-opacity"></i>
+				<i class="fa fa-snapchat w3-hover-opacity"></i>
+				<i class="fa fa-pinterest-p w3-hover-opacity"></i>
+				<i class="fa fa-twitter w3-hover-opacity"></i>
+				<i class="fa fa-linkedin w3-hover-opacity"></i>
+			</div>
+		</footer>
+
+		<script>
+			// Modal Image Gallery
+			function onClick(element) {
+				document.getElementById("img01").src = element.src;
+				document.getElementById("modal01").style.display = "block";
+				var captionText = document.getElementById("caption");
+				captionText.innerHTML = element.alt;
+			}
 
 
-// Toggle between showing and hiding the sidebar when clicking the menu icon
-var mySidebar = document.getElementById("mySidebar");
+			// Toggle between showing and hiding the sidebar when clicking the menu icon
+			var mySidebar = document.getElementById("mySidebar");
 
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-  } else {
-    mySidebar.style.display = 'block';
-  }
-}
+			function w3_open() {
+				if (mySidebar.style.display === 'block') {
+					mySidebar.style.display = 'none';
+				} else {
+					mySidebar.style.display = 'block';
+				}
+			}
 
-// Close the sidebar with the close button
-function w3_close() {
-    mySidebar.style.display = "none";
-}
-</script>
+			// Close the sidebar with the close button
+			function w3_close() {
+				mySidebar.style.display = "none";
+			}
+		</script>
 
 </body>
+
 </html>
